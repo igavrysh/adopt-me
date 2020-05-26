@@ -65,7 +65,7 @@ class Details extends React.Component<RouteComponentProps<{ id: string }>> {
     return (
       <div className="details">
         <Carousel media={media} />
-        <div onClick={console.log}></div>
+        <div onClick={console.log} />
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} - ${breed} - ${location}`}</h2>
