@@ -70,10 +70,10 @@ class Details extends React.Component<RouteComponentProps<{ id: string }>> {
           <h1>{name}</h1>
           <h2>{`${animal} - ${breed} - ${location}`}</h2>
           <ThemeContext.Consumer>
-            {(themeHook) => (
+            {([theme]) => (
               <button
                 onClick={this.toggleModal}
-                style={{ backgroundColor: themeHook[0].buttonColor }}
+                style={{ backgroundColor: theme }}
               >
                 Adopt {name}
               </button>

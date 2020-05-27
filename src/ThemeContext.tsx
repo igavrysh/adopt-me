@@ -1,8 +1,8 @@
-import { createContext } from "react";
+import { createContext, Dispatch, SetStateAction } from "react";
 
-const ThemeContext = createContext<[string, (theme: string) => void]>([
+const ThemeContext = createContext<[string, Dispatch<SetStateAction<string>>]>([
   "green",
-  () => {},
+  (theme) => theme,
 ]);
 
 export default ThemeContext;
