@@ -13,15 +13,17 @@ const SearchParams = () => {
   const [theme, setTheme] = useContext(ThemeContext);
 
   async function requestPets() {
-    const { animals } = await pet.animals({
-      location,
-      breed,
-      type: animal,
-    });
+    pet
+      .animals({
+        location,
+        breed,
+        type: animal,
+      })
+      .then(({ animals }) => {
+        console.log("animals", animals || []);
 
-    console.log("animals", animals);
-
-    setPets(animals || []);
+        setPets(animals || []);
+      });
   }
 
   useEffect(() => {

@@ -16,7 +16,7 @@ const doggos = JSON.parse(
 
 export const ANIMALS = ["dog", "cat", "bird"];
 export const _breeds = breeds;
-export const _dogs = doggos.ANIMALS;
+export const _dogs = doggos.animals;
 
 const mock = {
   breeds: jest.fn(() => {
